@@ -1,0 +1,11 @@
+{
+	"name": "mfe-override-fetch",
+	"version": "0.0.0",
+	"description": "",
+	"private": true,
+	"license": "UNLICENSED",
+	"scripts": {
+		"build": "turbo run build --filter @mfe-override-fetch/*",
+		"dev": "turbo run dev --filter @mfe-override-fetch/*"
+	}
+}

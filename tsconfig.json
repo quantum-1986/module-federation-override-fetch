@@ -1,0 +1,30 @@
+{
+	"$schema": "http://json.schemastore.org/tsconfig",
+	"compilerOptions": {
+		"incremental": true,
+		"target": "es2022",
+		"lib": [
+			"DOM",
+			"ES2020"
+		],
+		"jsx": "react-jsx",
+		"module": "es2022",
+		"moduleResolution": "node",
+		"resolveJsonModule": true,
+		"declaration": true,
+		"removeComments": false,
+		"isolatedModules": true,
+		"allowSyntheticDefaultImports": true,
+		"esModuleInterop": true,
+		"forceConsistentCasingInFileNames": true,
+		"skipLibCheck": true
+	},
+	"exclude": ["node_modules", "**/dist"],
+	"ts-node": {
+		"esm": true,
+		"swc": true,
+		"transpileOnly": true,
+		"preferTsExts": true,
+		"experimentalSpecifierResolution": "node"
+	}
+}
