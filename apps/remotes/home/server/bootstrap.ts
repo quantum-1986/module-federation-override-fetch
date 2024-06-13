@@ -9,7 +9,7 @@ const fastify = Fastify({
 // Middleware to check for the specific header
 fastify.addHook("onRequest", (request, reply, done) => {
 	const appHeader = request.headers["x-application"];
-
+	console.log(`request.url: ${request.url} - request.headers["x-application"]: ${appHeader}`);
 	if (appHeader?.includes("host/")) {
 		done();
 	} else {
