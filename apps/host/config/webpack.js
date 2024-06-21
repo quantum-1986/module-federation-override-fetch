@@ -1,5 +1,5 @@
 const { resolve } = require("node:path");
-const { UniversalFederationPlugin } = require("@module-federation/node");
+const { ModuleFederationPlugin } = require("@module-federation/enhanced");
 
 const pkgDependencies = require("../package.json").dependencies;
 
@@ -54,7 +54,7 @@ const clientConfig = {
 		publicPath: `http://localhost:${DEV_PORT}/static/`,
 	},
 	plugins: [
-		new UniversalFederationPlugin({
+		new ModuleFederationPlugin({
 			...sharedModuleFederationConfig,
 			remotes: {
 				home: "home@http://localhost:3001/client/remoteEntry.js",
@@ -71,15 +71,16 @@ const serverConfig = {
 	...sharedConfig,
 	entry: "./server/index.ts",
 	name: "server",
-	target: false,
+	target: "async-node",
 	output: {
 		path: resolve(__dirname, "../dist/server"),
 		filename: "[name].js",
 		libraryTarget: "commonjs-module",
 	},
 	plugins: [
-		new UniversalFederationPlugin({
+		new ModuleFederationPlugin({
 			...sharedModuleFederationConfig,
+			runtimePlugins: [require.resolve("@module-federation/node/runtimePlugin")],
 			isServer: true,
 			remoteType: "script",
 			library: { type: "commonjs-module" },

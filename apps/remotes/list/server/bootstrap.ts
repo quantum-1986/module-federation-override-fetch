@@ -11,6 +11,7 @@ fastify.addHook("onRequest", (request, reply, done) => {
 	const appHeader = request.headers["x-application"];
 
 	if (appHeader?.includes("host/")) {
+		console.log("🚀 It works!!! Many thanks @ScriptedAlchemy 🎉");
 		done();
 	} else {
 		reply.status(403).send({ error: "Invalid X-Application header" });

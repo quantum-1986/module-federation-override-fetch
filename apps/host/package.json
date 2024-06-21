@@ -17,6 +17,7 @@
 	},
 	"devDependencies": {
 		"@fastify/static": "6.10.2",
+		"@module-federation/enhanced": "0.0.0-next-20240612203225",
 		"@module-federation/node": "0.0.0-next-20240612203225",
 		"html-webpack-plugin": "5.5.3",
 		"webpack": "5.91.0",

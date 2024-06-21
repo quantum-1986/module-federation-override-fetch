@@ -74,6 +74,9 @@ importers:
       '@fastify/static':
         specifier: 6.10.2
         version: 6.10.2
+      '@module-federation/enhanced':
+        specifier: 0.0.0-next-20240612203225
+        version: 0.0.0-next-20240612203225(typescript@5.2.2)(webpack@5.91.0)
       '@module-federation/node':
         specifier: 0.0.0-next-20240612203225
         version: 0.0.0-next-20240612203225(react-dom@18.2.0)(react@18.2.0)(typescript@5.2.2)(webpack@5.91.0)
@@ -105,6 +108,9 @@ importers:
       '@fastify/static':
         specifier: 6.10.2
         version: 6.10.2
+      '@module-federation/enhanced':
+        specifier: 0.0.0-next-20240612203225
+        version: 0.0.0-next-20240612203225(typescript@5.2.2)(webpack@5.91.0)
       '@module-federation/node':
         specifier: 0.0.0-next-20240612203225
         version: 0.0.0-next-20240612203225(react-dom@18.2.0)(react@18.2.0)(typescript@5.2.2)(webpack@5.91.0)
@@ -142,6 +148,9 @@ importers:
       '@fastify/static':
         specifier: 6.10.2
         version: 6.10.2
+      '@module-federation/enhanced':
+        specifier: 0.0.0-next-20240612203225
+        version: 0.0.0-next-20240612203225(typescript@5.2.2)(webpack@5.91.0)
       '@module-federation/node':
         specifier: 0.0.0-next-20240612203225
         version: 0.0.0-next-20240612203225(react-dom@18.2.0)(react@18.2.0)(typescript@5.2.2)(webpack@5.91.0)
