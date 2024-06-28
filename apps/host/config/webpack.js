@@ -58,8 +58,8 @@ const clientConfig = {
 		new ModuleFederationPlugin({
 			...sharedModuleFederationConfig,
 			remotes: {
-				home: "home@http://localhost:3001/client/remoteEntry.js",
-				list: "list@http://localhost:3002/client/remoteEntry.js",
+				home: "home@http://localhost:3001/client/mf-manifest.json",
+				list: "list@http://localhost:3002/client/mf-manifest.json",
 			},
 		}),
 	],
