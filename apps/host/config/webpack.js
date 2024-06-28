@@ -1,5 +1,6 @@
 const { resolve } = require("node:path");
 const { ModuleFederationPlugin } = require("@module-federation/enhanced");
+const path = require("node:path");
 
 const pkgDependencies = require("../package.json").dependencies;
 
@@ -80,7 +81,7 @@ const serverConfig = {
 	plugins: [
 		new ModuleFederationPlugin({
 			...sharedModuleFederationConfig,
-			runtimePlugins: [require.resolve("@module-federation/node/runtimePlugin")],
+			runtimePlugins: [path.resolve(__dirname, "./custom-runtime-plugin.js")],
 			isServer: true,
 			remoteType: "script",
 			library: { type: "commonjs-module" },
