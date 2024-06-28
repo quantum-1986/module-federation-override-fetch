@@ -54,6 +54,7 @@ const clientConfig = {
 		path: resolve(__dirname, `../dist/remote/client`),
 		filename: "[name].js",
 		chunkFilename: "[name].js",
+		clean: true,
 	},
 	plugins: [
 		new ModuleFederationPlugin({
@@ -73,6 +74,7 @@ const serverConfig = {
 		path: resolve(__dirname, `../dist/remote/server`),
 		filename: "[name].js",
 		libraryTarget: "commonjs-module",
+		clean: true,
 	},
 	plugins: [
 		new ModuleFederationPlugin({

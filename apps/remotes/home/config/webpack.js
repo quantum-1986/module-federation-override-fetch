@@ -3,8 +3,6 @@ const { ModuleFederationPlugin } = require("@module-federation/enhanced");
 
 const pkgDependencies = require("../package.json").dependencies;
 
-const DEV_PORT = 3001;
-
 const SHARED_DEPENDENCIES = ["react", "react-dom", "react-dom/client", "react-router-dom"];
 
 const sharedModuleFederationConfig = {
@@ -56,7 +54,7 @@ const clientConfig = {
 		path: resolve(__dirname, "../dist/remote/client"),
 		filename: "[name].js",
 		chunkFilename: "[name].js",
-		publicPath: `http://localhost:${DEV_PORT}/client/`,
+		clean: true,
 	},
 	plugins: [
 		new ModuleFederationPlugin({
@@ -84,6 +82,7 @@ const serverConfig = {
 			remoteType: "script",
 			isServer: true,
 			library: { type: "commonjs-module" },
+			clean: true,
 		}),
 	],
 };
