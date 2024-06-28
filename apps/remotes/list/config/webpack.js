@@ -54,7 +54,7 @@ const clientConfig = {
 		path: resolve(__dirname, `../dist/remote/client`),
 		filename: "[name].js",
 		chunkFilename: "[name].js",
-		publicPath: "auto", // "auto" will use "window.location.origin
+		publicPath: "auto",
 		clean: true,
 	},
 	plugins: [
@@ -75,6 +75,7 @@ const serverConfig = {
 		path: resolve(__dirname, `../dist/remote/server`),
 		filename: "[name].js",
 		libraryTarget: "commonjs-module",
+		publicPath: "auto",
 		clean: true,
 	},
 	plugins: [

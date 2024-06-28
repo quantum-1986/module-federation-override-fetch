@@ -53,6 +53,7 @@ const clientConfig = {
 		filename: "[name].js",
 		chunkFilename: "[name].js",
 		publicPath: `http://localhost:${DEV_PORT}/static/`,
+		clean: true,
 	},
 	plugins: [
 		new ModuleFederationPlugin({
@@ -77,6 +78,8 @@ const serverConfig = {
 		path: resolve(__dirname, "../dist/server"),
 		filename: "[name].js",
 		libraryTarget: "commonjs-module",
+		publicPath: "auto",
+		clean: true,
 	},
 	plugins: [
 		new ModuleFederationPlugin({
@@ -86,8 +89,8 @@ const serverConfig = {
 			remoteType: "script",
 			library: { type: "commonjs-module" },
 			remotes: {
-				home: "home@http://localhost:3001/server/remoteEntry.js",
-				list: "list@http://localhost:3002/server/remoteEntry.js",
+				home: "home@http://localhost:3001/server/mf-manifest.json",
+				list: "list@http://localhost:3002/server/mf-manifest.json",
 			},
 		}),
 	],
